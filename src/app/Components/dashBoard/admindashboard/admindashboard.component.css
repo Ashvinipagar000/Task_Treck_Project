@@ -1,0 +1,31 @@
+.table-container {
+  padding: 16px;
+  overflow-x: auto;
+}
+
+
+table {
+  width: 100%;
+  min-width: 1200px;
+}
+
+th.mat-header-cell, td.mat-cell {
+  text-align: left;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+.icons{
+  justify-content: right;
+  display: flex;
+}
+
+.btn{
+  background-color: #f7dbe4;
+  color: #bd2d42;
+  border-radius: 4px;
+}

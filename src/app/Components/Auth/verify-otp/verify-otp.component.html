@@ -1,0 +1,17 @@
+<div class=>
+<h5 class="otp">OTP Verification</h5>
+<p>Enter OTP:</p>
+<p-inputOtp
+  [(ngModel)]="otpValue"
+  [length]="6"
+  inputStyleClass="otp-box"
+  styleClass="otp-container">
+</p-inputOtp>
+<p class="otp">Entered OTP: {{ otpValue }}</p>
+<!-- <p-inputotp [(ngModel)]="otpValue" /> -->
+ <div class="bbtns">
+<button mat-raised-button color="primary" class="btns" (click)="verifyOtp()">verify</button>&nbsp;
+<button mat-raised-button color="primary" class="btns"  (click)="onCancel()">Cancel</button>
+</div>
+<div><a href="">Click here</a> to resend Otp</div>
+</div>

@@ -1,0 +1,63 @@
+/* ::ng-deep .cdk-overlay-pane {
+  background-color: rgb(95, 74, 189) !important;
+} */
+/* .otp-box{
+  background-color: white !important;
+} */
+ ::ng-deep.mdc-dialog--open .mat-mdc-dialog-surface{
+/* .otpcontainer{ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 42vh;
+  width: 50vh;
+  background-color: #e6c2cd; /* Light background color */
+  text-align: center;
+  border-radius: 20% ;
+}
+::ng-deep .p-inputtext{
+  background-color: white !important;
+  font-size: 1.5rem !important;
+  border-radius: 25% !important;
+}
+
+::ng-deep .p-inputotp{
+  justify-content: center;
+}
+
+.otp{
+  display: flex;
+  justify-content: center;
+  color: rgb(50, 46, 109);
+}
+
+.verifybtn{
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.bbtns{
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.btns{
+background-color: #007bff; /* Custom background color */
+  color: white;
+  font-size: 16px;
+  border-radius: 3px; /* Rounded corners */
+height: 4vh;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow */
+
+}
+/* padding: 12px 24px; /* Padding for button */
+  /* border-radius: 3px;  */
+  /* Rounded corners */
+  /* text-transform: none;  */
+  /* To prevent automatic uppercase transformation */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+   /* Add some shadow */
+  /* transition: background-color 0.3s ease, box-shadow 0.3s ease; */

@@ -1,0 +1,48 @@
+.heading{
+  background-color: rgb(240, 241, 241) !important;
+  text-align: center;
+  margin: 0;
+}
+.reheading{
+  background-color: rgb(241, 249, 252) !important;
+  text-align: center;
+  margin: 0;
+}
+.savebutton{
+  color: rgb(247, 239, 244) !important;
+  background-color: rgb(120, 163, 64);
+  margin-right: 30px;
+}
+
+.cancelbtn{
+  color: antiquewhite;
+  background-color: rgb(224, 131, 131);
+  margin-right: 20px;
+}
+.btndiv{
+  background-color: rgb(110, 177, 235);
+  display: flex;
+  justify-content: end;
+}
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .form-row label {
+    width: 100px; /* Fixed width to align inputs */
+    font-weight: bold;
+  }
+
+  .form-row input {
+    flex: 0;
+    padding: 6px;
+  }
+
+
+  .abc {
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full screen height */
+  }

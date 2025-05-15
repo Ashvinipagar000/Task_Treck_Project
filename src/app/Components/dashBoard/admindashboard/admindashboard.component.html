@@ -1,0 +1,85 @@
+<p>admindashboard works!</p>
+
+<div class="icons">
+  <input type="text" placeholder="Search">&nbsp;&nbsp;&nbsp;
+  <input type="date">
+  &nbsp;&nbsp;&nbsp;
+<button class="btn">
+   <mat-icon>email</mat-icon>
+</button>&nbsp;&nbsp;&nbsp;
+<button class="btn">
+   <mat-icon>file_download</mat-icon>
+</button>&nbsp;&nbsp;&nbsp;
+<button class="btn">
+   <mat-icon>file_upload</mat-icon>
+</button>&nbsp;&nbsp;&nbsp;
+<button class="btn">
+   <mat-icon>settings</mat-icon>
+</button>
+</div>
+<div class="container">
+<div class="table-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef  >
+        <mat-checkbox></mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row"  >
+        <mat-checkbox></mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Dynamic Columns -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef class="th-divider"> ID </th>
+      <td mat-cell *matCellDef="let row" class="td-divider"> {{ row.id }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef class="th-divider"> Name </th>
+      <td mat-cell *matCellDef="let row" class="td-divider"> {{ row.name }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef class="th-divider" > Email </th>
+      <td mat-cell *matCellDef="let row" class="td-divider"> {{ row.email }} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="createdAt">
+      <th mat-header-cell *matHeaderCellDef class="th-divider"> Created At </th>
+      <td mat-cell *matCellDef="let row" class="td-divider"> {{ row.createdAt }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef class="th-divider"> Action </th>
+      <td mat-cell (click)="openComments()" *matCellDef="let row" class="td-divider"> <mat-icon>arrow_drop_up</mat-icon> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="updatedAt">
+      <th mat-header-cell *matHeaderCellDef class="th-divider"> Updated At </th>
+      <td mat-cell *matCellDef="let row" class="td-divider"> {{ row.updatedAt }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef class="th-divider"> Status </th>
+      <td mat-cell *matCellDef="let row" class="td-divider"> {{ row.status }} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell (click)="openComments()" *matCellDef="let row" > <mat-icon>wb_sunny</mat-icon> </td>
+    </ng-container> -->
+
+
+
+    <!-- Header and Row Declarations -->
+    <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+
+  </table>
+</div>
+</div>

@@ -1,0 +1,24 @@
+/* header.component.scss */
+.header-toolbar {
+  position: sticky; /* 👈 Makes the element stick */
+  top: 0;
+  /* z-index: 1000;  */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: rgb(112, 14, 38);
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 16px;
+  color: azure;
+}

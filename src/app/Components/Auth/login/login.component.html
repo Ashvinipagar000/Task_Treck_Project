@@ -1,0 +1,55 @@
+<p>login works!</p>
+<!-- <div class="spinner" *ngIf="isloader">
+  <mat-spinner></mat-spinner>
+</div> -->
+<section class="login-wrapper">
+  <div class="container">
+    <mat-card class="login-card mat-elevation-z8">
+      <div class="card-content">
+
+        <!-- Left Image or Logo -->
+        <div class="left-side">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" alt="logo" class="logo-img">
+          <h4>Good {{greet}}</h4>
+          <h2>Welcome Back</h2>
+          <p>Login to your account to continue</p>
+        </div>
+
+        <!-- Right Form Section -->
+        <div class="right-side">
+          <form>
+            <mat-form-field appearance="outline" class="w-100 mb-3">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="Enter email address" [(ngModel)]="email" name="email" #emailFormField="ngModel" required>
+              <mat-error *ngIf="emailFormField.invalid && emailFormField.touched">Email is required</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100 mb-3">
+              <mat-label>Password</mat-label>
+              <input matInput [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="password" name="password" #passwordFormField="ngModel" required>
+              <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" type="button">
+                <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+              <mat-error *ngIf="passwordFormField.invalid && passwordFormField.touched">Password is required</mat-error>
+            </mat-form-field>
+
+            <div *ngIf="errorMessage" class="text-danger mb-3">
+              {{ errorMessage }}
+            </div>
+
+            <!-- <button mat-raised-button color="primary" class="w-100 login-button" (click)="login()" type="button"> -->
+            <button mat-raised-button color="primary" class="w-100 login-button" (click)="login()" type="button">
+              Login
+            </button>
+
+            <div class="links mt-3">
+              <a href="#">Forgot password?</a> |
+              <a href="#" mat-button color="accent">Create new account</a>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </mat-card>
+  </div>
+</section>
