@@ -1,9 +1,28 @@
 <p>userdashboard works!</p>
 
 <div class="icons">
-  <input type="text" placeholder="Search">&nbsp;&nbsp;&nbsp;
-  <input type="date">
-  &nbsp;&nbsp;&nbsp;
+  <div style="justify-content:left;">
+<!-- <mat-form-field> -->
+  <!-- <mat-label>Search</mat-label> -->
+  <input matInput [(ngModel)]="searchstr"  (input)="applyFilter($event)" placeholder="Search...">
+<!-- </mat-form-field> -->
+ <mat-form-field appearance="outline">
+  <mat-label>Choose a date range</mat-label>
+  <mat-date-range-input [rangePicker]="picker">
+    <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+    <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>
+ </div>
+<!-- <mat-date-range-input [rangePicker]="picker">
+  <input matStartDate placeholder="Start date">
+  <input matEndDate placeholder="End date">
+</mat-date-range-input>
+
+<mat-date-range-picker #picker></mat-date-range-picker>  &nbsp;&nbsp;&nbsp; -->
+<!-- <div>
 <button class="btn">
    <mat-icon>email</mat-icon>
 </button>&nbsp;&nbsp;&nbsp;
@@ -15,12 +34,16 @@
 </button>&nbsp;&nbsp;&nbsp;
 <button class="btn" [matMenuTriggerFor]="settingsMenu">
    <mat-icon>settings</mat-icon>
+</button>&nbsp;&nbsp;&nbsp;
+<button class="btn" (click)="refresh()">
+   <mat-icon>refresh</mat-icon>
 </button>
 <mat-menu #settingsMenu="matMenu">
   <mat-checkbox *ngFor="let col of allColumns" [(ngModel)]="col.visible">
     {{ col.label }}
   </mat-checkbox>
 </mat-menu>
+</div> -->
 </div>
 <div class="container">
 <div class="table-container">

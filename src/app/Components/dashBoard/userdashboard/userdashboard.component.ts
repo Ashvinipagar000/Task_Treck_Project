@@ -12,6 +12,9 @@ import { AdmindashboardpopupComponent } from '../admindashboard/admindashboardpo
   styleUrl: './userdashboard.component.css'
 })
 export class UserdashboardComponent implements OnInit{
+    searchstr='';
+    startDate!: Date;
+endDate!: Date;
 
     constructor(private dialog:MatDialog, private userservice:UserService){}
     ngOnInit(){
@@ -62,6 +65,15 @@ export class UserdashboardComponent implements OnInit{
 
      })
     }
+   applyFilter(event: Event) {
+  const filterValue = (event.target as HTMLInputElement).value;
+  this.dataSource.filter = filterValue.trim().toLowerCase();
+}
+refresh(){
+  this.searchstr='';
+  this.dataSource.filter = '';
+  // this.getAlluser();
+}
 
 
 

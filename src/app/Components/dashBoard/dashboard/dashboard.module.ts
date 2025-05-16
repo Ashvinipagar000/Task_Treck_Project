@@ -9,8 +9,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
-
-
+import { MatInputModule } from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [UserdashboardComponent, AdmindashboardComponent],
   imports: [
@@ -20,7 +21,10 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatIconModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ]
 })
 export class DashboardModule { }

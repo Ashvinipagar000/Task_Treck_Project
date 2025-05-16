@@ -34,6 +34,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
 
+
   ],
   providers: [
     provideAnimationsAsync()
