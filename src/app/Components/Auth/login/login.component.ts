@@ -100,7 +100,7 @@ ngOnInit(): void {
 
     // const VOTPpayload={
 
-    //     phoneNumber: "+919503076225",
+    //     phoneNumber: "",
     //     otp: "432536"
 
     // }
@@ -111,7 +111,7 @@ ngOnInit(): void {
         // const decodedToken: any = jwtDecode(response.token);
         // const role = this.authService.getRole();
         // const SOTPpayload={
-        //   "phoneNumber": "+919503076225"
+        //   "phoneNumber": ""
         // }
         const dialogref = this.dialog.open(VerifyOTPComponent, {
           // width:'400px',
@@ -124,7 +124,7 @@ ngOnInit(): void {
             // You can navigate or update UI here
           }
         });
-        const SOTPpayload = { phoneNumber: '+919503076225' };
+        const SOTPpayload = { phoneNumber: '' };
         this.authService.sendotp(SOTPpayload).subscribe({
           next: (response) => {
             console.log('OTP sent successfully', response);
