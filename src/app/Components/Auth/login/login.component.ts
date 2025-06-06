@@ -124,7 +124,7 @@ ngOnInit(): void {
             // You can navigate or update UI here
           }
         });
-        const SOTPpayload = { phoneNumber: '' };
+        const SOTPpayload = { phoneNumber: '+919503076225' };
         this.authService.sendotp(SOTPpayload).subscribe({
           next: (response) => {
             console.log('OTP sent successfully', response);

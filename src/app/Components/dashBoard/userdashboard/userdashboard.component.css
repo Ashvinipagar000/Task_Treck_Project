@@ -29,3 +29,13 @@ th.mat-header-cell, td.mat-cell {
   color: #bd2d42;
   border-radius: 4px;
 }
+
+
+::ng-deep.mat-mdc-icon-button {
+  color: #bd2d42 !important;
+  margin-top: -16px;
+}
+
+::ng-deep.mat-mdc-dialog-surface {
+  border-radius: 4px !important;
+}

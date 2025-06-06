@@ -10,11 +10,20 @@ export interface users {
   id: any;
   name: any;
   email: any;
+  role: any;
+  task_id: any;
+  title: any;
+  description: any;
+  task_status: any;
+  priority: any;
+  time_spent: any;
+  estimated_time: any;
   createdAt: any;
   updatedAt: any;
   status: any;
   action: any;
 }
+
 @Component({
   selector: 'app-admindashboard',
   templateUrl: './admindashboard.component.html',

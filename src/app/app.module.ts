@@ -13,6 +13,11 @@ import { AdmindashboardpopupComponent } from './Components/dashBoard/admindashbo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // ✅ Required
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { SampleComponent } from './Components/sample/sample.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,7 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     HeaderPopoupComponent,
     AdmindashboardpopupComponent,
+    SampleComponent,
 
 
   ],
@@ -33,6 +39,11 @@ import { CommonModule } from '@angular/common';
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    RouterModule,
+    MatSelectModule,
+    MatOptionModule,
+    BrowserAnimationsModule,
+    FormsModule
 
 
   ],

@@ -1,0 +1,18 @@
+<p>hello </p>
+
+<p *ngFor="let subsystem of subsystems"> {{ subsystem.name }}</p>
+<mat-form-field appearance="fill">
+<mat-select multiple [(value)]="selectedSubsystems" (selectionChange)="onSubsystemChange($event)">
+  <mat-option *ngFor="let subsystem of subsystems" [value]="subsystem.id" name="id">{{ subsystem.name }}</mat-option>
+</mat-select>
+
+
+</mat-form-field>
+
+ <mat-form-field appearance="fill">
+      <mat-select multiple [(value)]="selectedPartIds" (selectionChange)="onPartChange($event)">
+  <mat-option *ngFor="let part of parts" [value]="part.partId" name="">
+    {{ part.name }}
+  </mat-option>
+</mat-select>
+    </mat-form-field>

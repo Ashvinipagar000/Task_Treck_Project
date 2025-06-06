@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './verify-otp.component.css',
 })
 export class VerifyOTPComponent {
-  phoneNumber: string = '';
+  phoneNumber: string = '+919503076225';
   otpValue: string = '';
   constructor(
     private service: AuthService,

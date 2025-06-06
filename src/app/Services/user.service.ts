@@ -18,4 +18,9 @@ export class UserService {
     return this.http.get<users[]>(url);
   }
 
+  updateUser(users:any){
+    const url= `${this.DNUrlD}/user/UpdateTaskStatus`
+    return this.http.put(url,users)
+  }
+
 }

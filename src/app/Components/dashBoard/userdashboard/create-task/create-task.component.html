@@ -1,0 +1,70 @@
+<p>create new task </p>
+<form form action="" onsubmit="create()">
+  <div>
+    <button mat-button (click)="create()">save</button>
+    <button mat-button (click)="create()">cancel</button>
+  </div>
+  <div>
+    <p>task details</p>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label> taskid </mat-label>
+      <input
+        [(ngModel)]="person.taskid"
+        name="taskid"
+        matInput
+        placeholder="enter taskid"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>title</mat-label>
+      <input
+        [(ngModel)]="person.title"
+        name="title"
+        matInput
+        placeholder="enter title"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100 mb-3">
+      <mat-label>priority</mat-label>
+      <input
+        matInput
+        placeholder="Enter priority address"
+        [(ngModel)]="person.priority"
+        name="priority"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label> Tspend </mat-label>
+      <input
+        [(ngModel)]="person.Tspend"
+        name="Tspend"
+        matInput
+        placeholder="enter Tspend"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Testimeted </mat-label>
+      <input
+        [(ngModel)]="person.Testimeted"
+        name="Testimeted"
+        matInput
+        placeholder="enter Testimeted"
+      />
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label> description </mat-label>
+    <input
+      type="text"
+      [(ngModel)]="person.description"
+      name="description"
+      matInput
+      placeholder="enter description"
+    />
+  </mat-form-field>
+</form>

@@ -2,6 +2,7 @@ import { LoginModule } from './Components/Auth/login/login.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Components/Auth/login/login.component';
+import { SampleComponent } from './Components/sample/sample.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
     path:'admin-dashboard',
     loadChildren:()=> import('./Components/dashBoard/dashboard/dashboard.module').then(m=>m.DashboardModule)
   },
+  {
+    path:'smaple',
+    component:SampleComponent
+  }
 
 ];
 
