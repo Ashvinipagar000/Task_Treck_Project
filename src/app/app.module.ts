@@ -18,6 +18,9 @@ import { SampleComponent } from './Components/sample/sample.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
+import { SidenavComponent } from './Components/Common/sidenav/sidenav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     HeaderPopoupComponent,
     AdmindashboardpopupComponent,
     SampleComponent,
+    SidenavComponent,
 
 
   ],
@@ -43,7 +47,9 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatOptionModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule,
+    MatListModule
 
 
   ],

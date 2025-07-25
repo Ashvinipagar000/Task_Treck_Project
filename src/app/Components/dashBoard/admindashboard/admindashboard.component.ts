@@ -30,6 +30,26 @@ export interface users {
   styleUrl: './admindashboard.component.css'
 })
 export class AdmindashboardComponent {
+
+  chartData = [
+    { name: 'January', value: 35 },
+    { name: 'February', value: 50 },
+    { name: 'March', value: 70 },
+    { name: 'April', value: 40 },
+  ];
+
+  view: [number, number] = [700, 400];
+
+  // Options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Month';
+  showYAxisLabel = true;
+  yAxisLabel = 'Sales';
+
   constructor(private dialog:MatDialog, private userservice:UserService){}
   ngOnInit(){
     this.getAlluser();

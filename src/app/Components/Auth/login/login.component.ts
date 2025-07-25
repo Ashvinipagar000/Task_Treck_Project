@@ -87,13 +87,14 @@ ngOnInit(): void {
   }
 
   login() {
+    debugger
     this.isloader = true;
     const payload = {
-      Email: this.email,
-      PasswordHash: this.password,
+      email: this.email,
+      password_hash: this.password,
     };
 
-    if (payload.Email === '' || payload.PasswordHash === '') {
+    if (payload.email === '' || payload.password_hash === '') {
       this.toastr.warning('Email And password are required to login');
       return;
     }
@@ -106,6 +107,7 @@ ngOnInit(): void {
     // }
     this.authService.userlogin(payload).subscribe(
       (response) => {
+        debugger
         localStorage.setItem('token', response.token);
         this.authService.saveToken(response.token);
         // const decodedToken: any = jwtDecode(response.token);

@@ -15,6 +15,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { CreateTaskComponent } from '../userdashboard/create-task/create-task.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 @NgModule({
   declarations: [
     UserdashboardComponent,
@@ -35,7 +37,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatPaginator,
     MatFormFieldModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    NgxChartsModule
+
   ]
 })
 export class DashboardModule { }

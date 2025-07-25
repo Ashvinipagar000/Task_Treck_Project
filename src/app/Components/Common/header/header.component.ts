@@ -31,8 +31,9 @@ export class HeaderComponent {
 
   openPopup(){
     let dialogrea=this.dialog.open(HeaderPopoupComponent, {
-      height: '337px',
-    width: '559px'
+      height: '200px',
+    width: '200px',
+    panelClass: 'custom-dialog'
     })
   }
 }

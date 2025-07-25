@@ -27,6 +27,12 @@ private Nurl=environment.apiUrlNodeJS;
     catchError(this.handleError)
   );
 }
+postMethod(endpoint: string, file:any): Observable<any> {
+  return this.http.post<any>(`${this.Durl}/${endpoint}`,file).pipe(
+    catchError(this.handleError)
+  );
+}
+
 
   private handleError(error: HttpErrorResponse) {
     let errorMessage = '';

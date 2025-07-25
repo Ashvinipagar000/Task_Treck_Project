@@ -65,3 +65,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* .mat-mdc-text-field-wrapper {
     height: 39px !important} */
+.custom-dialog {
+  margin-left: 1000px;
+  margin-bottom: 61px;
+}
