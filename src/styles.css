@@ -20,13 +20,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 .mat-mdc-table .mat-mdc-header-cell{
-  background-color: #bd2d42 !important;
+  background-color: #058292 !important;
 }
 .mat-mdc-table .mat-mdc-header-cell{
   height: 20px;
 }
 .mat-mdc-cell{
-  background: #fbd2d8 !important;
+  background: #66c5c5 !important;
   /* height: 20px; */
 }
 
@@ -47,7 +47,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-right: 1px solid #ccc; /* or any color */
 }
 .td-divider{
-  border-right: 1px solid#bd2d42; /* or any color */
+  border-right: 1px solid#067465; /* or any color */
 
 }
 

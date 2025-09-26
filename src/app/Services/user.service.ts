@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../environment';
 import { Observable } from 'rxjs';
 import { users } from '../Components/dashBoard/admindashboard/admindashboard.component';
+import { Student } from '../Components/students/students.component';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +23,14 @@ export class UserService {
     const url= `${this.DNUrlD}/user/UpdateTaskStatus`
     return this.http.put(url,users)
   }
+
+  getAllStudents(): Observable<Student[]> {
+    return this.http.get<Student[]>(`${this.DNUrlD}/Student/GetStudent`);
+  }
+
+  updateStudent(id: number, student: Student) {
+  return this.http.put(`${this.DNUrlD}/Student/updatestudent`, student);
+}
+
 
 }

@@ -53,4 +53,8 @@ postMethod(endpoint: string, file:any): Observable<any> {
      alert(errorMessage); // Display error message in a popup
     return throwError(() => new Error(errorMessage));
   }
+  openFile() {
+  return this.http.get<any>(`http://localhost:5286/apiUrlDotNet/FileUpload/download/base64/11`);
+}
+
 }

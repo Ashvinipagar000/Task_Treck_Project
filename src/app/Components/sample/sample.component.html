@@ -1,7 +1,36 @@
 <p>hello </p>
+<!-- <p>upload file</p>
+<input type="file" (change)="onfileselect($event)" >
+<div *ngIf="selectedfile; ">
+
+  <button (click)="uploadfile()">Upload</button>
+</div> -->
+<!-- upload.component.html -->
+<div class="upload-container">
+  <h2>📤 Upload Files</h2>
+
+  <!-- File Input -->
+  <label class="custom-file-upload">
+    <input type="file" multiple (change)="onfileselect($event)" />
+    Choose Files
+  </label>
+
+  <!-- File Preview -->
+  <div class="file-list" *ngIf="selectedfile?.length">
+    <p><strong>Selected Files:</strong></p>
+    <ul>
+      <li *ngFor="let file of selectedfile">{{ file.name }}</li>
+    </ul>
+
+    <!-- Upload Button -->
+    <button class="upload-button" (click)="uploadfile()">Upload</button>
+  </div>
+</div>
+
+
 
 <p *ngFor="let subsystem of subsystems"> {{ subsystem.name }}</p>
-<mat-form-field appearance="fill">
+<!-- <mat-form-field appearance="fill">
 <mat-select multiple [(value)]="selectedSubsystems" (selectionChange)="onSubsystemChange($event)">
   <mat-option *ngFor="let subsystem of subsystems" [value]="subsystem.id" name="id">{{ subsystem.name }}</mat-option>
 </mat-select>
@@ -10,9 +39,31 @@
 </mat-form-field>
 
  <mat-form-field appearance="fill">
+  <mat-label>parts</mat-label>
       <mat-select multiple [(value)]="selectedPartIds" (selectionChange)="onPartChange($event)">
+
   <mat-option *ngFor="let part of parts" [value]="part.partId" name="">
     {{ part.name }}
   </mat-option>
 </mat-select>
-    </mat-form-field>
+    </mat-form-field> -->
+
+
+    <td>
+  <!-- <button class="btn btn-primary btn-sm" (click)="download(file)">Download</button> -->
+</td>
+
+
+<h2>Uploaded Files</h2>
+
+<ul>
+  <li *ngFor="let file of files">
+    {{ file }}
+    <!-- Open in new tab -->
+    <button (click)="openFile(file)">Open</button>
+    <!-- Download -->
+    <button (click)="downloadFile(file)">Download</button>
+  </li>
+</ul>
+
+

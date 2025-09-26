@@ -4,7 +4,7 @@
 
 .sidenav {
   width: 220px;
-  background-color: #fbd2d8;
+  background-color: #5fa0cc;
 }
 
 .main-content {
@@ -17,5 +17,5 @@
 }
 
 .mat-toolbar-single-row {
-  background-color: #bd2d42
+  background-color: #0f6080
 }

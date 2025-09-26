@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Student List</h2>
+
+  <table mat-table [dataSource]="students" class="mat-elevation-z8" style="width: 100%;">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="s_id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let student"> {{student.s_id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="s_name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let student"> {{student.s_name}} </td>
+    </ng-container>
+
+    <!-- Roll No Column -->
+    <ng-container matColumnDef="s_rollno">
+      <th mat-header-cell *matHeaderCellDef> Roll No </th>
+      <td mat-cell *matCellDef="let student"> {{student.s_rollno}} </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let student">
+        <button mat-raised-button color="accent" (click)="openPopup(student)">
+          Update
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Header & Row Declaration -->
+    <tr mat-header-row *matHeaderRowDef="['s_id', 's_name', 's_rollno', 'action']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['s_id', 's_name', 's_rollno', 'action'];"></tr>
+  </table>
+</div>

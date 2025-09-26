@@ -17,10 +17,18 @@ import { RouterModule } from '@angular/router';
 import { SampleComponent } from './Components/sample/sample.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidenavComponent } from './Components/Common/sidenav/sidenav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { TaskPopupComponent } from './Components/dashBoard/userdashboard/task-popup/task-popup.component';
+import { StudentsComponent } from './Components/students/students.component';
+import { UpdatePopupComponent } from './Components/students/update-popup/update-popup.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { CodeComponent } from './code/code.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +38,10 @@ import { MatListModule } from '@angular/material/list';
     AdmindashboardpopupComponent,
     SampleComponent,
     SidenavComponent,
-
+    TaskPopupComponent,
+    StudentsComponent,
+    UpdatePopupComponent,
+CodeComponent
 
   ],
   imports: [
@@ -49,7 +60,14 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     FormsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatButtonModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
 
 
   ],
