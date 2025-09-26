@@ -46,4 +46,8 @@ this.filterdarray = this.students;
     this.filterdarray = this.students;
    }
 
+   greet(){
+    var message="hello";
+   }
+
 }
